@@ -22,9 +22,9 @@ RUN install-php-extensions \
 
 RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
 RUN apt install -y nodejs
+RUN npm install --global yarn
 RUN apt install -y python3
 RUN apt install -y python3-pip
-RUN npm install --global yarn
 
 WORKDIR /app
 
