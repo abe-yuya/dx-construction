@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   nginx:
-    build: "../dx-construction/.docker/nginx"
+    build: ".docker/nginx"
     container_name: dx-construction-nginx
     ports:
       - "80:80"
@@ -13,7 +13,7 @@ services:
       - app
 
   app:
-    build: "../dx-construction/.docker/php"
+    build: ".docker/php"
     container_name: dx-construction-app
     working_dir: /app
     volumes:
@@ -32,7 +32,7 @@ services:
 
   mysql:
     container_name: dx-construction-mysql
-    build: "../dx-construction/.docker/mysql"
+    build: ".docker/mysql"
     ports:
       - "3306:3306"
     volumes:
